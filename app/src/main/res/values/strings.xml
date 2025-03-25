@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EasyBank</string>
+
+    <string name="notification_error_email_title">Fund Transfer Error: Email Not Found</string>
+    <string name="notification_error_email_text">We encountered an issue with your fund transfer. The email address associated with the recipient\'s account does not exist. Please verify the email and try again.</string>
+
+    <string name="notification_error_balance_title">Low Balance Alert</string>
+    <string name="notification_error_balance_text">Your account balance is currently low. Consider making a deposit or reviewing your recent transactions. Stay on top of your finances!</string>
+
+    <string name="notification_transfer_successful_title">Fund Transfer Successful</string>
+    <string name="notification_transfer_successful_text">Your fund transfer of ₱%.2f to %s has been successfully completed. Thank you for choosing EasyBank!.</string>
+
+    <string name="notification_bill_title">Bill Payment Successful</string>
+    <string name="notification_bill_text">Your %s bill has been successfully paid! Amount: ₱%.2f. Thank you for staying on top of your payments!</string>
+</resources>
