@@ -39,7 +39,10 @@ public class TransactionActivity extends BaseActivity {
         transactionAdapter = new TransactionAdapter(TransactionActivity.this, transactions);
 
         binding.emptyIndicator.setVisibility(transactions.isEmpty() ? View.VISIBLE : View.GONE);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        binding.recyclerView.setLayoutManager(linearLayoutManager);
         binding.recyclerView.setAdapter(transactionAdapter);
     }
 
