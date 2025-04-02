@@ -216,6 +216,13 @@ public class Database extends SQLiteOpenHelper {
             statement.bindDouble(1, amount);
             statement.bindLong(2, accountID);
             statement.executeUpdateDelete();
+
+            ContentValues values = new ContentValues();
+            values.put("account_id", accountID);
+            values.put("amount", amount);
+            values.put("type", "Send Money");
+            values.put("date", DateUtil.getDate(System.currentTimeMillis()));
+            database.insert("transactions", null, values);
             database.close();
             return true;
         }
@@ -241,6 +248,13 @@ public class Database extends SQLiteOpenHelper {
         statement.bindDouble(1, amount);
         statement.bindLong(2, accountID);
         statement.executeUpdateDelete();
+
+        ContentValues values = new ContentValues();
+        values.put("account_id", accountID);
+        values.put("amount", amount);
+        values.put("type", "Pay Bills");
+        values.put("date", DateUtil.getDate(System.currentTimeMillis()));
+        database.insert("transactions", null, values);
         database.close();
     }
 }
